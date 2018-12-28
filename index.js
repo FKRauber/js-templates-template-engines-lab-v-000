@@ -18,12 +18,13 @@ function createPost() {
 }
 
 function postComment() {
+  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
+
   var comment = document.getElementById('commentBody').value;
   var commenter = document.getElementById('commentAuthor').value;
   var allComments = document.getElementById('comments');
   var commentsSection = document.getElementById("comments");
 
-  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
 
   commentsSection.innerHTML += commentTemplate({ 'commenter': commenterName, 'comment': commentText
 }
