@@ -23,8 +23,7 @@ function postComment() {
   var allComments = document.getElementById('comments');
   var commentsSection = document.getElementById("comments");
 
-  var commentTemplate = document.getElementById('comment-template').innerHTML;
-  var templateFn = _.template(commentTemplate);
+  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
 
   commentsSection.innerHTML += commentTemplate({ 'commenter': commenterName, 'comment': commentText
 }
