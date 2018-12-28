@@ -26,7 +26,12 @@
         <footer>Posted by: <%- postAuthor %></footer>
       </article>
     </script>
-
+    <script id="comment-template" type="text/x-lodash-template">
+      <div class="comment">
+        <div class="comment-body"><%= comment %></div>
+        <footer class="posted-by">Posted by: <%= commenter %></footer>
+      </div>
+    </script>
     <form id="post-form" onsubmit="createPost();return false;">
       Title: <input type="text" id="postTitle"><br>
       Body: <input type="text" id="postBody"><br>
@@ -40,13 +45,6 @@
           Comment: <input type="text" id="comment"><br>
           <input type="submit">
         </form>
-      </div>
-    </script>
-
-    <script id="comment-template" type="text/x-lodash-template">
-      <div class="comment">
-        <div class="comment-body"><%= comment %></div>
-        <footer class="posted-by">Posted by: <%= commenter %></footer>
       </div>
     </script>
   </body>
