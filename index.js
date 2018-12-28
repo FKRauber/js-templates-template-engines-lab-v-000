@@ -18,10 +18,10 @@ function createPost() {
 }
 
 function postComment() {
-  let comment = document.getElementById('commentBody').value;
-  let commenter = document.getElementById('commentAuthor').value;
-  let allComments = document.getElementById('comments');
+  var comment = document.getElementById('commentBody').value;
+  var commenter = document.getElementById('commentAuthor').value;
+  var allComments = document.getElementById('comments');
 
   var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
-  let templateFn = _.template(commentTemplate);
+  var commentsSection = 
 }
