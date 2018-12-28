@@ -22,6 +22,6 @@ function postComment() {
   let commenter = document.getElementById('commentAuthor').value;
   let allComments = document.getElementById('comments');
 
-  let commentTemplate = document.getElementById('comment-template').innerHTML;
+  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
   let templateFn = _.template(commentTemplate);
 }
